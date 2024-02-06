@@ -3,5 +3,69 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ui-library": {
+      "projectType": "library",
+      "root": "projects/ui-library",
+      "sourceRoot": "projects/ui-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ui-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ui-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ui-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ui-library/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "tsConfig": "projects/ui-library/.storybook/tsconfig.json",
+            "configDir": "projects/ui-library/.storybook",
+            "browserTarget": "ui-library:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui-library"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/ui-library/.storybook",
+            "browserTarget": "ui-library:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui-library"
+            ],
+            "outputDir": "storybook-static"
+          }
+        }
+      }
+    }
   }
 }

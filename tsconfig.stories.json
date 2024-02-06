@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "declaration": false
+  },
+  "include": ["src/**/*.stories.ts"],
+  "exclude": ["src/test-setup.ts", "src/**/*.spec.ts"]
+}
