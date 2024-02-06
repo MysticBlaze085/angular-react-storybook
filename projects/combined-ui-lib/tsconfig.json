@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../../out-tsc/",
+      "declaration": true,
+      "declarationMap": true,
+      "inlineSources": true,
+      "types": [],
+      "jsx": "react",
+    },
+    "exclude": [
+      "**/*.spec.ts"
+    ]
+  }

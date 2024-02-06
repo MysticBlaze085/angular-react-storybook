@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/angular";
+import { StorybookConfig } from "@storybook/react";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -8,10 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  framework: {
-    name: "@storybook/angular",
-    options: {},
-  },
+  framework: "react", // Specify the framework as "react"
   docs: {
     autodocs: "tag",
   },
@@ -28,4 +25,5 @@ const config: StorybookConfig = {
     return config;
   },
 };
+
 export default config;
