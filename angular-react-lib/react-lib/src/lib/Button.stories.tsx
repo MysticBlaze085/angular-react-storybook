@@ -1,6 +1,6 @@
 // components/Button.stories.tsx
 import React from 'react';
-import { Story } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import Button from './Button';
 
 export default {
@@ -11,7 +11,7 @@ export default {
   },
 };
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
