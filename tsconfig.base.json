@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "angular-lib": ["angular-lib/src/index.ts"],
-      "react-lib": ["react-lib/src/index.ts"]
+      "react-lib": ["react-lib/src/index.ts"],
+      "shared-libraries": ["shared-libraries/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
