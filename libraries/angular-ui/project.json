@@ -1,0 +1,26 @@
+{
+  "name": "angular-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libraries/angular-ui/src",
+  "prefix": "rhapsody",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libraries/angular-ui/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libraries/angular-ui/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libraries/angular-ui/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

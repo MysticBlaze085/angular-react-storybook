@@ -1,0 +1,9 @@
+{
+  "name": "rhapsody-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/rhapsody-e2e/src",
+  "targets": {},
+  "tags": [],
+  "implicitDependencies": ["rhapsody"]
+}

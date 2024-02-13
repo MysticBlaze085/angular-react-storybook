@@ -1,5 +1,6 @@
 {
   "compileOnSave": false,
+  "allowedNonPeerDependencies": true,
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
@@ -15,9 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "angular-lib": ["libraries/-lib/src/index.ts"],
-      "react-lib": ["libraries/react-lib/src/index.ts"],
-      "ui": ["packages/ui/src/index.ts"]
+      "@rhapsody/angular-ui": ["libraries/angular-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
