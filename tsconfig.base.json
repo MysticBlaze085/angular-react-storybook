@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rhapsody/angular-ui": ["libraries/angular-ui/src/index.ts"]
+      "@rhapsody/angular-ui": ["libraries/angular-ui/src/index.ts"],
+      "@rhapsody/web-components": ["libraries/web-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

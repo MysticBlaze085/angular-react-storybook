@@ -9,6 +9,13 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": "@rhapsody/angular-ui/*"
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
