@@ -23,13 +23,15 @@ import { PopupComponent } from "./popup.component";
       injector: Injector,
       public popup: PopupService,
     ) {
-      // Check if the custom element has already been defined
-      if (!customElements.get(this.popupElementName)) {
+        // Check if the custom element has already been defined
+        const isCheck = customElements.get(this.popupElementName);
+        console.debug('IsChecker: ', isCheck)
+        if (!isCheck) {
         // Convert `PopupComponent` to a custom element if it hasn't been defined yet.
         const PopupElement = createCustomElement(PopupComponent, {injector});
         // Register the custom element with the browser.
         customElements.define(this.popupElementName, PopupElement);
-      }
+        }
     }
   }
   

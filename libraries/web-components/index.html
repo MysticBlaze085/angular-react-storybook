@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <style>
+        div {
+            border: 2px solid orange;
+        }
+    </style>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+</head>
+<body>
+    <p><rhap-tooltip text="Web Components is a set of standards.">Web Components</rhap-tooltip> are awesome!</p>
+    <rhap-tooltip></rhap-tooltip>
+    <div>This does not get the web component styles!</div>
+    <a is="rhap-confirm-link" href="https://google.com"></a>
+</body>
+</html>

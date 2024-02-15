@@ -31,7 +31,6 @@ export class PopupService {
     });
 
     // Set the message
-    console.log('message', message)
     popupComponentRef.instance.message = message;
 
     // Add to the DOM
@@ -40,19 +39,23 @@ export class PopupService {
 
   // This uses the new custom-element method to add the popup to the DOM.
   showAsElement(message: string) {
-    // Create element
-    const popupEl: NgElement & WithProperties<PopupComponent> = document.createElement(
-      'popup-element',
-    ) as any;
+    if (!document.querySelector('popup-element')) {
+      // Create element
+      const popupEl: NgElement & WithProperties<PopupComponent> = document.createElement(
+        'popup-element',
+      ) as any;
 
-    // Listen to the close event
-    popupEl.addEventListener('closed', () => document.body.removeChild(popupEl));
+      // Listen to the close event
+      popupEl.addEventListener('closed', () => document.body.removeChild(popupEl));
+      const isCheck = customElements.get('popup-element');
+      console.debug('IsChecker service: ', isCheck)
 
-    // Set the message
-    popupEl.message = message;
+      // Set the message
+      popupEl.message = message;
 
-    // Add to the DOM
-    document.body.appendChild(popupEl);
+      // Add to the DOM
+      document.body.appendChild(popupEl);
+    }
   }
 }
 
