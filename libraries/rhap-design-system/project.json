@@ -1,0 +1,24 @@
+{
+  "name": "libraries/rhap-design-system",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./libraries/rhap-design-system/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "./libraries/rhap-design-system/tsconfig.lib.json",
+        "configPath": "./libraries/rhap-design-system/stencil.config.ts",
+        "outputPath": "dist/./libraries/rhap-design-system"
+      }
+    }
+  }
+}
