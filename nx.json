@@ -86,6 +86,9 @@
     },
     "@nx/angular:component": {
       "style": "css"
+    },
+    "@nxext/stencil:component": {
+      "style": "scss"
     }
   },
   "tasksRunnerOptions": {

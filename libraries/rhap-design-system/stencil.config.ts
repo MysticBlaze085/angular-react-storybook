@@ -1,18 +1,20 @@
 import { Config } from '@stencil/core';
-import tailwind from "stencil-tailwind";
+import { readFileSync } from 'fs';
+import tailwind from 'stencil-tailwind'
 
 export const config: Config = {
-  namespace: 'libraries/rhap-design-system',
+  namespace: 'rhap-design-system',
   taskQueue: 'async',
   sourceMap: true,
-
-  extras: {
-    experimentalImportInjection: true,
-  },
+  enableCache: true,
   plugins: [
     tailwind()
   ],
+  extras: {
+    experimentalImportInjection: true,
+  },
   devServer: {
-    reloadStrategy: 'pageReload'
+    reloadStrategy: 'pageReload',
+    port: 4444
   }
 };

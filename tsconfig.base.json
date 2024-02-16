@@ -17,7 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@rhapsody/angular-ui": ["libraries/angular-ui/src/index.ts"],
-      "@rhapsody/libraries/rhap-design-system": [
+      "@rhapsody/rhap-design-system": [
         "./libraries/rhap-design-system/src/index.ts"
       ],
       "@rhapsody/web-components": ["libraries/web-components/src/index.ts"]
