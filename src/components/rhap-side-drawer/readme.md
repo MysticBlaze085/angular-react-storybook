@@ -10,7 +10,20 @@
 | Property | Attribute | Description | Type      | Default           |
 | -------- | --------- | ----------- | --------- | ----------------- |
 | `htitle` | `htitle`  |             | `string`  | `'Default Title'` |
-| `open`   | `open`    |             | `boolean` | `undefined`       |
+| `opened` | `opened`  |             | `boolean` | `undefined`       |
+
+
+## Methods
+
+### `open() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ----------------------------------------------

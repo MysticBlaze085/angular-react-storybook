@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
+    "start": "stencil build --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
@@ -38,7 +38,7 @@
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/addon-links": "^7.6.16",
-    "@storybook/addon-mdx-gfm": "^7.6.16",
+    "@storybook/addon-mdx-gfm": "^7.6.17",
     "@storybook/angular": "^7.6.16",
     "@storybook/blocks": "^7.6.16",
     "@storybook/html": "^7.6.16",

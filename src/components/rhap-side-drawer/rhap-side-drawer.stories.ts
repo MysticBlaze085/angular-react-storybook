@@ -1,6 +1,5 @@
 export default {
-    // this creates a ‘Components’ folder and a ‘MyComponent’ subfolder
-    title: 'Components/RhapSideDrawer',
+    title: 'Example/RhapSideDrawer',
     tags: ['autodocs'],
     argTypes: {
         htitle: 'Test',
@@ -18,13 +17,17 @@ const Template = (args) => `
     </nav>
 </rhap-side-drawer>
 <script>
-    const sideDrawerButton = document.querySelector('#side-drawer-btn');
-    const sideDrawer = document.querySelector('rhap-side-drawer');
-    sideDrawerButton.addEventListener('click', () => {
-        if (!sideDrawer.open) {
-            sideDrawer.open = true;
-        }
-    });
+    try {
+        const sideDrawerButton = document.querySelector('#side-drawer-btn');
+        const sideDrawer = document.querySelector('rhap-side-drawer');
+        sideDrawerButton.addEventListener('click', () => {
+            if (!sideDrawer.opened) {
+                sideDrawer.open();
+            }
+        });
+    } catch (error) {
+        console.error('An error occurred while declaring sideDrawerButton:', error);
+    }
 </script>
 `;
 export const RhapSideDrawer = Template.bind({});
