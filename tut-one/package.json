@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build-components": "npx nx run shared-components:build-angular && npx nx run shared-components:build-react",
+    "build": "npx nx run shared-components:build",
     "package-lib": "cd dist/shared-components && tar -czvf shared-components.tgz ."
   },
   "private": true,
