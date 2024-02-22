@@ -1,0 +1,56 @@
+{
+  "extends": ["../.eslintrc.base.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "plugin:@nx/angular/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "rhapsody",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "rhapsody",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.tsx"],
+      "extends": [
+        "plugin:@nx/react/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
+      ],
+      "rules": {
+       
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@nx/angular-template/recommended"],
+      "rules": {}
+    },
+    {
+      "files": ["*.scss"], // Add this section for SCSS files
+      "extends": [
+        "stylelint-config-standard" // Extend with a stylelint configuration
+      ],
+      "plugins": [
+        "stylelint-scss" // Add the stylelint-scss plugin for SCSS support
+      ]
+    }
+  ]
+}

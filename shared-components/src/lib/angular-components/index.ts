@@ -1,0 +1,1 @@
+export * from './my-angular-component/my-angular-component.component'
