@@ -1,0 +1,26 @@
+{
+  "name": "shared-components",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared-components/src",
+  "prefix": "lib",
+  "tags": ["ui"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "shared-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "shared-components/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "shared-components/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

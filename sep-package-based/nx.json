@@ -6,9 +6,14 @@
   },
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudAccessToken": "Mjc4ODkzYmQtYmM1My00ZDJlLTgwYjMtOTdhZjcxMDY1MjFkfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "NWIzOGFmZTItZWY4OC00MmVkLTgwY2YtYTIxZTcwM2Y1ZTA2fHJlYWQtd3JpdGU=",
   "targetDefaults": {
     "@nx/angular:ng-packagr-lite": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    },
+    "@nx/rollup:rollup": {
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
@@ -34,8 +39,18 @@
       "unitTestRunner": "jest",
       "buildable": true
     },
+    "@nx/react:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "buildable": true
+    },
     "@nx/angular:component": {
       "style": "css"
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "jest"
+      }
     }
   }
 }

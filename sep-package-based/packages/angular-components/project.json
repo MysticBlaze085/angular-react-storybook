@@ -1,0 +1,26 @@
+{
+  "name": "angular-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/angular-components/src",
+  "prefix": "lib",
+  "tags": ["ui"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "packages/angular-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/angular-components/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/angular-components/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}
