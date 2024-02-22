@@ -35,7 +35,6 @@
         "plugin:jsx-a11y/recommended"
       ],
       "rules": {
-       
       }
     },
     {
@@ -44,12 +43,12 @@
       "rules": {}
     },
     {
-      "files": ["*.scss"], // Add this section for SCSS files
+      "files": ["*.scss"],
       "extends": [
-        "stylelint-config-standard" // Extend with a stylelint configuration
+        "stylelint-config-standard"
       ],
       "plugins": [
-        "stylelint-scss" // Add the stylelint-scss plugin for SCSS support
+        "stylelint-scss"
       ]
     }
   ]

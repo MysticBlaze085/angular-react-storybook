@@ -6,10 +6,10 @@
   "tags": [],
   "projectType": "library",
   "targets": {
-    "build-angular": {
+    "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
-        "outputPath": "dist/shared-components-angular",
+        "outputPath": "dist/shared-components",
         "index": "{projectRoot}/src/index.ts",
         "tsConfig": "{projectRoot}/tsconfig.json"
       },
@@ -17,12 +17,6 @@
         "production": {
           "tsConfig": "{projectRoot}/tsconfig.lib.json"
         }
-      }
-    },
-    "build-react": {
-      "executor": "@nrwl/react:build",
-      "options": {
-        "outputPath": "dist/shared-components-react"
       }
     }
   }

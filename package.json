@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build-components": "npx nx run shared-components:build-angular && npx nx run shared-components:build-react"
+    "build-components": "npx nx run shared-components:build-angular && npx nx run shared-components:build-react",
+    "package-lib": "cd dist/shared-components && tar -czvf shared-components.tgz ."
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "@angular/cli": "~17.1.0",
     "@angular/compiler-cli": "~17.1.0",
     "@angular/language-service": "~17.1.0",
+    "@nrwl/react": "^18.0.4",
     "@nrwl/workspace": "^18.0.4",
     "@nx-plugins/tailwind": "^0.0.19",
     "@nx/cypress": "18.0.4",
@@ -41,7 +43,6 @@
     "@nx/eslint-plugin": "18.0.4",
     "@nx/jest": "18.0.4",
     "@nx/js": "18.0.4",
-    "@nx/react": "18.0.4",
     "@nx/storybook": "18.0.4",
     "@nx/web": "18.0.4",
     "@nx/workspace": "18.0.4",
