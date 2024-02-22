@@ -5,5 +5,25 @@
   "prefix": "rhapsody",
   "tags": [],
   "projectType": "library",
-  "targets": {}
+  "targets": {
+    "build-angular": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/shared-components-angular",
+        "index": "{projectRoot}/src/index.ts",
+        "tsConfig": "{projectRoot}/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "{projectRoot}/tsconfig.lib.json"
+        }
+      }
+    },
+    "build-react": {
+      "executor": "@nrwl/react:build",
+      "options": {
+        "outputPath": "dist/shared-components-react"
+      }
+    }
+  }
 }

@@ -24,5 +24,7 @@
       "@rhapsody/web-components": ["libraries/web-components/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "tmp"],
+  "file": ["shared-components/src/index.ts"]
 }
