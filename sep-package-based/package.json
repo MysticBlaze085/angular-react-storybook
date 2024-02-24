@@ -2,7 +2,9 @@
   "name": "sep-package-based",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "combined-pkg": "tar -czvf combined-package.tgz ./packages/combined-libs"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.1.0",
