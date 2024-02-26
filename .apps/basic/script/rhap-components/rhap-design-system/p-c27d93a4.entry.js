@@ -1,2 +1,0 @@
-import{r as t,h as e}from"./p-9e81b5d8.js";function s(t,e,s){return(t||"")+(e?` ${e}`:"")+(s?` ${s}`:"")}const n=":host{display:block}";const d=n;const i=class{constructor(e){t(this,e);this.first=undefined;this.middle=undefined;this.last=undefined}getText(){return s(this.first,this.middle,this.last)}render(){return e("div",{key:"46812a42ed0d224cdb260860105f24e4bd9bd44f"},"Hello, World! I'm ",this.getText())}};i.style=d;export{i as my_component};
-//# sourceMappingURL=p-c27d93a4.entry.js.map
