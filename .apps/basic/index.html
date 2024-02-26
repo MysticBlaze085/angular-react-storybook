@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script/rhap-components/index.js"></script>
+</head>
+<body>
+  <button id="side-drawer-btn">Open Side Menu</button>
+    <rhap-side-drawer htitle="${args.htitle}">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="/">A Link</a>
+                <li><a href="/">Another Link</a>
+                <li><a href="/">A Third Link</a>
+            </ul>
+        </nav>
+    </rhap-side-drawer>
+    <script>
+        try {
+            const sideDrawerButton = document.querySelector('#side-drawer-btn');
+            const sideDrawer = document.querySelector('rhap-side-drawer');
+            sideDrawerButton.addEventListener('click', () => {
+                if (!sideDrawer.opened) {
+                    sideDrawer.open();
+                }
+            });
+        } catch (error) {
+            console.error('An error occurred while declaring sideDrawerButton:', error);
+        }
+    </script>
+</body>
+</html>

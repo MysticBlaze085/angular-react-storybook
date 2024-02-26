@@ -1,4 +1,4 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, State, Watch, h } from '@stencil/core';
 
 import {AV_API_KEY} from '../../global/global'
 
@@ -9,14 +9,22 @@ import {AV_API_KEY} from '../../global/global'
 })
 export class StockPrice {
   stockInput: HTMLInputElement;
-  initialStockSymbole: string;
+  // initialStockSymbole: string;
   // @Element() el: HTMLElement;
   @State() fetchedPrice: number;
   @State() stockUserInput: string;
   @State() stockInputValid = false;
   @State() error: string;
 
-  @Prop() stockSymbol: string;
+  @Prop({mutable: true, reflect: true}) stockSymbol: string;
+
+  @Watch('stockSymbol')
+  stockSymbolChanged(newValue: string, oldValue: string) {
+    if (newValue !== oldValue) {
+      this.stockUserInput = newValue;
+      this.fetchStockPrice(newValue);
+    }
+  }
 
   onUserInput(event: Event) {
     this.stockUserInput = (event.target as HTMLInputElement).value;
@@ -27,8 +35,9 @@ export class StockPrice {
   onFetchStockPrice(event: Event) {
     event.preventDefault();
     // const stockSymbol = (this.el.shadowRoot.querySelector('#stock-symbol') as HTMLInputElement).value;
-    const stockSymbol = this.stockInput.value;
-    this.fetchStockPrice(stockSymbol);
+    // const stockSymbol = this.stockInput.value;
+    this.stockSymbol = this.stockInput.value;
+    // this.fetchStockPrice(stockSymbol);
   }
 
   componentWillLoad() {
@@ -40,7 +49,7 @@ export class StockPrice {
   componentDidLoad() {
     console.log('componentDidLoad');
     if (this.stockSymbol) {
-      this.initialStockSymbole = this.stockSymbol;
+      // this.initialStockSymbole = this.stockSymbol;
       this.stockUserInput = this.stockSymbol;
       this.stockInputValid = true;
       this.fetchStockPrice(this.stockSymbol);
@@ -53,10 +62,10 @@ export class StockPrice {
 
   componentDidUpdate() {
     console.log('componentDidUpdate');
-    if (this.stockSymbol !== this.initialStockSymbole) {
-      this.initialStockSymbole = this.stockSymbol;
-      this.fetchStockPrice(this.stockSymbol);
-    }
+    // if (this.stockSymbol !== this.initialStockSymbole) {
+    //   this.initialStockSymbole = this.stockSymbol;
+    //   this.fetchStockPrice(this.stockSymbol);
+    // }
   }
 
   disconnectedCallback() {
@@ -92,10 +101,10 @@ export class StockPrice {
     return (
       [
         <form onSubmit={this.onFetchStockPrice.bind(this)}>
-          <input 
-            id="stock-symbol" 
-            ref={(el) => this.stockInput = el} 
-            value={this.stockUserInput} 
+          <input
+            id="stock-symbol"
+            ref={(el) => this.stockInput = el}
+            value={this.stockUserInput}
             onInput={this.onUserInput.bind(this)} />
           <button type="submit" disabled={!this.stockInputValid}>Fetch</button>
         </form>,
