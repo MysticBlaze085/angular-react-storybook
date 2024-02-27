@@ -20,8 +20,11 @@ export class RhapSideDrawer {
   }
 
   @Method()
-  open() {
-    this.opened = true;
+  async open(): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this.opened = true;
+      resolve();
+    });
   }
 
   render() {

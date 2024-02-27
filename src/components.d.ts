@@ -19,6 +19,8 @@ export namespace Components {
     interface StockPrice {
         "stockSymbol": string;
     }
+    interface TailwindComponent {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -39,10 +41,17 @@ declare global {
         prototype: HTMLStockPriceElement;
         new (): HTMLStockPriceElement;
     };
+    interface HTMLTailwindComponentElement extends Components.TailwindComponent, HTMLStencilElement {
+    }
+    var HTMLTailwindComponentElement: {
+        prototype: HTMLTailwindComponentElement;
+        new (): HTMLTailwindComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "rhap-side-drawer": HTMLRhapSideDrawerElement;
         "stock-price": HTMLStockPriceElement;
+        "tailwind-component": HTMLTailwindComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -58,10 +67,13 @@ declare namespace LocalJSX {
     interface StockPrice {
         "stockSymbol"?: string;
     }
+    interface TailwindComponent {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "rhap-side-drawer": RhapSideDrawer;
         "stock-price": StockPrice;
+        "tailwind-component": TailwindComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -71,6 +83,7 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "rhap-side-drawer": LocalJSX.RhapSideDrawer & JSXBase.HTMLAttributes<HTMLRhapSideDrawerElement>;
             "stock-price": LocalJSX.StockPrice & JSXBase.HTMLAttributes<HTMLStockPriceElement>;
+            "tailwind-component": LocalJSX.TailwindComponent & JSXBase.HTMLAttributes<HTMLTailwindComponentElement>;
         }
     }
 }
