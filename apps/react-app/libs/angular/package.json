@@ -1,0 +1,35 @@
+{
+  "name": "@rhapsody/angular",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/platform-browser": "~16.2.0",
+    "@angular/platform-browser-dynamic": "~16.2.0",
+    "@angular/elements": "^17.2.3"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "module": "esm2022/rhapsody-angular.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "esm2022": "./esm2022/rhapsody-angular.mjs",
+      "esm": "./esm2022/rhapsody-angular.mjs",
+      "default": "./esm2022/rhapsody-angular.mjs"
+    },
+    "./ang-test": {
+      "esm2022": "./esm2022/ang-test/rhapsody-angular-ang-test.mjs",
+      "esm": "./esm2022/ang-test/rhapsody-angular-ang-test.mjs",
+      "default": "./esm2022/ang-test/rhapsody-angular-ang-test.mjs"
+    }
+  }
+}

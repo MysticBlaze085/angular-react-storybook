@@ -1,6 +1,8 @@
+import './App.css';
+import '@rhapsody/angular/esm2022/ang-test/rhapsody-angular-ang-test.mjs';
+
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <my-element></my-element>
         <a
           className="App-link"
           href="https://reactjs.org"

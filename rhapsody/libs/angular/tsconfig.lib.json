@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "test-setup.ts",
+    "jest.config.ts",
+    "**/*.test.ts"
+  ],
+  "include": ["**/*.ts"],
+  "exports": {
+    ".": "./dist/index.js",
+    "./angular/esm2022/ang-test/lib/ang-test.component": "./dist/angular/ang-test/lib/ang-test.component.mjs",
+    "./angular/esm2022/ang-test/lib/ang-test-web.component": "./dist/angular/ang-test/lib/ang-test-web.component.mjs",
+  }
+}
