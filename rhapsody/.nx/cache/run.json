@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx build angular --prod --verbose",
+    "startTime": "2024-03-01T01:51:44.828Z",
+    "endTime": "2024-03-01T01:51:46.097Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "angular:build:production",
+      "target": "build",
+      "projectName": "angular",
+      "hash": "5367003907960715972",
+      "startTime": "2024-03-01T01:51:44.833Z",
+      "endTime": "2024-03-01T01:51:46.097Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

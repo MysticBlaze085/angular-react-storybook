@@ -1,0 +1,22 @@
+[34mBuilding Angular Package[39m
+
+------------------------------------------------------------------------------
+Building entry point '@rhapsody/angular'
+------------------------------------------------------------------------------
+Copying assets
+Writing package manifest
+Built @rhapsody/angular
+
+------------------------------------------------------------------------------
+Building entry point '@rhapsody/angular/ang-test'
+------------------------------------------------------------------------------
+Built @rhapsody/angular/ang-test
+[32m[39m
+[32m------------------------------------------------------------------------------[39m
+[32mBuilt Angular Package[39m
+[32m - from: /Users/melissalanghausen/Sites/tuts/angular-react-storybook/rhapsody/libs/angular[39m
+[32m - to:   /Users/melissalanghausen/Sites/tuts/angular-react-storybook/rhapsody/dist/libs/angular[39m
+[32m------------------------------------------------------------------------------[39m
+[37m[37m[39m[37m[39m
+[37m[37mBuild at: [1m2024-03-01T01:46:21.701Z[22m - Time: [1m530[22mms[39m[37m[39m
+[37m[37m[39m[37m[39m
